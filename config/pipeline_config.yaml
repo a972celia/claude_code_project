@@ -1,0 +1,53 @@
+# Data Pipeline Configuration for AI-Powered Underwriting Engine
+
+# Data Sources Configuration
+data_sources:
+  yelp:
+    enabled: true
+    rate_limit: 5000  # requests per day
+    timeout: 30
+  
+  google_maps:
+    enabled: true
+    rate_limit: 40000  # requests per month
+    timeout: 30
+  
+  twitter:
+    enabled: true
+    rate_limit: 300  # requests per 15 minutes
+    timeout: 30
+  
+  shopify:
+    enabled: false  # Enable when API access is available
+    timeout: 30
+
+# Data Processing Configuration
+processing:
+  batch_size: 1000
+  max_workers: 4
+  retry_attempts: 3
+  
+  # NLP Configuration
+  nlp:
+    sentiment_model: "vader"  # vader, textblob, or transformers
+    language: "en"
+    min_text_length: 10
+  
+  # Feature Engineering
+  features:
+    review_lookback_days: 365
+    transaction_window_days: 90
+    min_reviews_required: 5
+
+# Data Storage Configuration
+storage:
+  raw_data_path: "data/raw"
+  processed_data_path: "data/processed"
+  format: "parquet"  # parquet, csv, json
+  compression: "snappy"
+
+# Logging Configuration
+logging:
+  level: "INFO"
+  format: "%(asctime)s - %(name)s - %(levelname)s - %(message)s"
+  file: "logs/pipeline.log"

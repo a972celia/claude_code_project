@@ -1,0 +1,58 @@
+# Model Configuration for AI-Powered Underwriting Engine
+
+# Model Training Configuration
+training:
+  algorithm: "xgboost"  # xgboost, lightgbm, random_forest
+  test_size: 0.2
+  validation_size: 0.1
+  random_state: 42
+  
+  # Cross-validation
+  cv_folds: 5
+  cv_scoring: "roc_auc"
+  
+  # Feature selection
+  feature_selection:
+    method: "recursive"  # recursive, mutual_info, lasso
+    max_features: 50
+    threshold: 0.01
+
+# XGBoost Hyperparameters
+xgboost:
+  n_estimators: 100
+  max_depth: 6
+  learning_rate: 0.1
+  subsample: 0.8
+  colsample_bytree: 0.8
+  reg_alpha: 0.1
+  reg_lambda: 1.0
+  random_state: 42
+
+# LightGBM Hyperparameters
+lightgbm:
+  n_estimators: 100
+  max_depth: 6
+  learning_rate: 0.1
+  subsample: 0.8
+  colsample_bytree: 0.8
+  reg_alpha: 0.1
+  reg_lambda: 1.0
+  random_state: 42
+
+# Model Evaluation
+evaluation:
+  metrics:
+    - "roc_auc"
+    - "precision"
+    - "recall"
+    - "f1_score"
+    - "accuracy"
+  
+  threshold: 0.7
+  shap_analysis: true
+
+# Model Deployment
+deployment:
+  model_path: "models/"
+  model_format: "pickle"  # pickle, joblib, onnx
+  version_control: true
