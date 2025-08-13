@@ -65,3 +65,7 @@ tweepy>=4.10.0
 click>=8.1.0
 tqdm>=4.64.0
 python-dateutil>=2.8.0
+
+# Data Acquisition
+kaggle>=1.5.0
+opendatasets>=0.1.0
