@@ -11,7 +11,7 @@ from pathlib import Path
 # Add src to path for imports
 sys.path.append(str(Path(__file__).parent.parent.parent / "src"))
 
-from scripts.data_acquisition.download_sba_data import SBADataDownloader
+from download_sba_data import SBADataDownloader
 from src.data_pipeline.validation.data_validator import DataValidator
 import pandas as pd
 

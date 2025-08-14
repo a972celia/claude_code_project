@@ -47,7 +47,7 @@ class SBADataDownloader:
             self.logger.error("Please run 'python scripts/data_acquisition/setup_kaggle.py' first")
             return False
     
-    def download_sba_dataset(self, dataset_name: str = "mirbektoktogaraev/small-business-administration-sba-loans"):
+    def download_sba_dataset(self, dataset_name: str = "marcobeyer/bondora-p2p-loans"):
         """
         Download SBA loan dataset from Kaggle.
         
