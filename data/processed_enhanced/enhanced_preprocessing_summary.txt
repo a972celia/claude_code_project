@@ -1,0 +1,28 @@
+PREPROCESSING PIPELINE SUMMARY
+==================================================
+
+features_dropped: 29
+features_selected: 38
+numeric_features: 33
+categorical_features: 5
+engineered_features: 14
+missing_threshold: 0.6
+preprocessing_steps:
+  - Mixed data types handling
+  - Target variable creation
+  - Feature dropping
+  - Outlier handling
+  - Feature engineering
+  - Feature selection
+  - Missing value imputation
+  - Categorical encoding
+  - Numeric scaling
+  - External data integration
+
+Generated on: 2025-08-15 12:29:20
+
+EXTERNAL DATA INTEGRATION
+==================================================
+❌ Yelp Integration: DISABLED
+
+Total Enhanced Features: 38
