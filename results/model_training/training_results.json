@@ -1,0 +1,947 @@
+{
+  "xgboost": {
+    "model_name": "xgboost",
+    "train_metrics": {
+      "accuracy": 0.7524471625459551,
+      "precision": 0.689702094571609,
+      "recall": 0.5550959742634476,
+      "f1_score": 0.6151212244345117,
+      "roc_auc": 0.8160076518127264,
+      "samples": 286965,
+      "default_rate": 0.35637447075427314
+    },
+    "val_metrics": {
+      "accuracy": 0.7501890474448103,
+      "precision": 0.6883732965326893,
+      "recall": 0.5463070709836402,
+      "f1_score": 0.6091668892874862,
+      "roc_auc": 0.8072897888063643,
+      "samples": 40995,
+      "default_rate": 0.3563605317721673
+    },
+    "test_metrics": {
+      "accuracy": 0.7475698552280128,
+      "precision": 0.6808880964510103,
+      "recall": 0.548923645573086,
+      "f1_score": 0.6078256750355282,
+      "roc_auc": 0.8082665584945469,
+      "samples": 81991,
+      "default_rate": 0.3563683818955739
+    },
+    "feature_importance": [
+      {
+        "feature": "LoanDate_year",
+        "importance": 0.31678006052970886
+      },
+      {
+        "feature": "Country",
+        "importance": 0.1946435570716858
+      },
+      {
+        "feature": "Rating",
+        "importance": 0.07776882499456406
+      },
+      {
+        "feature": "Interest",
+        "importance": 0.04253293201327324
+      },
+      {
+        "feature": "has_credit_score",
+        "importance": 0.037085652351379395
+      },
+      {
+        "feature": "LoanDuration",
+        "importance": 0.03487579524517059
+      },
+      {
+        "feature": "LoanApplicationStartedDate_year",
+        "importance": 0.030151110142469406
+      },
+      {
+        "feature": "Gender",
+        "importance": 0.017544355243444443
+      },
+      {
+        "feature": "Education",
+        "importance": 0.01723731867969036
+      },
+      {
+        "feature": "VerificationType",
+        "importance": 0.015667036175727844
+      },
+      {
+        "feature": "loan_to_income_ratio",
+        "importance": 0.013911668211221695
+      },
+      {
+        "feature": "LoanDate_month",
+        "importance": 0.013660592958331108
+      },
+      {
+        "feature": "AppliedAmount",
+        "importance": 0.013375640846788883
+      },
+      {
+        "feature": "LanguageCode",
+        "importance": 0.012848243117332458
+      },
+      {
+        "feature": "interest_category",
+        "importance": 0.011540363542735577
+      },
+      {
+        "feature": "NoOfPreviousLoansBeforeLoan",
+        "importance": 0.011056814342737198
+      },
+      {
+        "feature": "payment_to_income_ratio",
+        "importance": 0.00994584709405899
+      },
+      {
+        "feature": "LoanApplicationStartedDate_month",
+        "importance": 0.009889778681099415
+      },
+      {
+        "feature": "HomeOwnershipType",
+        "importance": 0.00973170343786478
+      },
+      {
+        "feature": "AmountOfPreviousLoansBeforeLoan",
+        "importance": 0.009046315215528011
+      },
+      {
+        "feature": "MonthlyPayment",
+        "importance": 0.008657977916300297
+      },
+      {
+        "feature": "Amount",
+        "importance": 0.007924978621304035
+      },
+      {
+        "feature": "has_previous_loans",
+        "importance": 0.007251731585711241
+      },
+      {
+        "feature": "MonthlyPaymentDay",
+        "importance": 0.007014323957264423
+      },
+      {
+        "feature": "LoanDate_weekday",
+        "importance": 0.006742226425558329
+      },
+      {
+        "feature": "Age",
+        "importance": 0.006275624502450228
+      },
+      {
+        "feature": "IncomeTotal",
+        "importance": 0.006226581521332264
+      },
+      {
+        "feature": "LoanApplicationStartedDate_weekday",
+        "importance": 0.006165929138660431
+      },
+      {
+        "feature": "ApplicationSignedHour",
+        "importance": 0.0060981689020991325
+      },
+      {
+        "feature": "ExistingLiabilities",
+        "importance": 0.005625789053738117
+      },
+      {
+        "feature": "LiabilitiesTotal",
+        "importance": 0.005343747790902853
+      },
+      {
+        "feature": "DebtToIncome",
+        "importance": 0.004892907105386257
+      },
+      {
+        "feature": "income_sources_count",
+        "importance": 0.004393041133880615
+      },
+      {
+        "feature": "FreeCash",
+        "importance": 0.004300849046558142
+      },
+      {
+        "feature": "ApplicationSignedWeekday",
+        "importance": 0.004166594240814447
+      },
+      {
+        "feature": "age_category",
+        "importance": 0.0039014171343296766
+      },
+      {
+        "feature": "RefinanceLiabilities",
+        "importance": 0.0031453443225473166
+      },
+      {
+        "feature": "amount_category",
+        "importance": 0.00257922918535769
+      }
+    ],
+    "training_time": 1.1913390159606934,
+    "cross_validation": {
+      "cv_mean": 0.8066523601978945,
+      "cv_std": 0.001371898177660864,
+      "cv_scores": [
+        0.8058803178393787,
+        0.8043674636563589,
+        0.8075864843482454,
+        0.8081974835438688,
+        0.8072300516016202
+      ]
+    },
+    "shap_analysis": {
+      "feature_importance": [
+        {
+          "feature": "LoanDate_year",
+          "importance": 0.4733041822910309
+        },
+        {
+          "feature": "Rating",
+          "importance": 0.2697218954563141
+        },
+        {
+          "feature": "Interest",
+          "importance": 0.1911095529794693
+        },
+        {
+          "feature": "LoanApplicationStartedDate_year",
+          "importance": 0.17189921438694
+        },
+        {
+          "feature": "LoanDuration",
+          "importance": 0.16222378611564636
+        },
+        {
+          "feature": "Country",
+          "importance": 0.10906784981489182
+        },
+        {
+          "feature": "Education",
+          "importance": 0.08107754588127136
+        },
+        {
+          "feature": "MonthlyPaymentDay",
+          "importance": 0.07854686677455902
+        },
+        {
+          "feature": "LoanDate_month",
+          "importance": 0.07458249479532242
+        },
+        {
+          "feature": "Gender",
+          "importance": 0.07092215865850449
+        },
+        {
+          "feature": "AppliedAmount",
+          "importance": 0.06960364431142807
+        },
+        {
+          "feature": "Age",
+          "importance": 0.06518040597438812
+        },
+        {
+          "feature": "HomeOwnershipType",
+          "importance": 0.06357136368751526
+        },
+        {
+          "feature": "AmountOfPreviousLoansBeforeLoan",
+          "importance": 0.06333626061677933
+        },
+        {
+          "feature": "LanguageCode",
+          "importance": 0.06086358428001404
+        },
+        {
+          "feature": "NoOfPreviousLoansBeforeLoan",
+          "importance": 0.0502646304666996
+        },
+        {
+          "feature": "loan_to_income_ratio",
+          "importance": 0.04561643302440643
+        },
+        {
+          "feature": "has_credit_score",
+          "importance": 0.03988545760512352
+        },
+        {
+          "feature": "LiabilitiesTotal",
+          "importance": 0.039762452244758606
+        },
+        {
+          "feature": "ApplicationSignedHour",
+          "importance": 0.035336051136255264
+        },
+        {
+          "feature": "IncomeTotal",
+          "importance": 0.035219818353652954
+        },
+        {
+          "feature": "LoanApplicationStartedDate_month",
+          "importance": 0.029813317582011223
+        },
+        {
+          "feature": "payment_to_income_ratio",
+          "importance": 0.029121428728103638
+        },
+        {
+          "feature": "LoanDate_weekday",
+          "importance": 0.021640146151185036
+        },
+        {
+          "feature": "Amount",
+          "importance": 0.02139659970998764
+        },
+        {
+          "feature": "MonthlyPayment",
+          "importance": 0.02032020501792431
+        },
+        {
+          "feature": "ExistingLiabilities",
+          "importance": 0.017371419817209244
+        },
+        {
+          "feature": "VerificationType",
+          "importance": 0.01420875359326601
+        },
+        {
+          "feature": "LoanApplicationStartedDate_weekday",
+          "importance": 0.012363567017018795
+        },
+        {
+          "feature": "ApplicationSignedWeekday",
+          "importance": 0.00922586303204298
+        },
+        {
+          "feature": "FreeCash",
+          "importance": 0.004928954411298037
+        },
+        {
+          "feature": "interest_category",
+          "importance": 0.004836736712604761
+        },
+        {
+          "feature": "DebtToIncome",
+          "importance": 0.003919234033674002
+        },
+        {
+          "feature": "age_category",
+          "importance": 0.0032422938384115696
+        },
+        {
+          "feature": "has_previous_loans",
+          "importance": 0.0030861340928822756
+        },
+        {
+          "feature": "income_sources_count",
+          "importance": 0.002183874836191535
+        },
+        {
+          "feature": "RefinanceLiabilities",
+          "importance": 0.0012235288741067052
+        },
+        {
+          "feature": "amount_category",
+          "importance": 0.0010078954510390759
+        }
+      ],
+      "shap_values_shape": [
+        1000,
+        38
+      ],
+      "explanation_samples": 1000
+    }
+  },
+  "lightgbm": {
+    "model_name": "lightgbm",
+    "train_metrics": {
+      "accuracy": 0.7489589322739707,
+      "precision": 0.6830763267234383,
+      "recall": 0.5513997672758564,
+      "f1_score": 0.6102153446596689,
+      "roc_auc": 0.8104028103800973,
+      "samples": 286965,
+      "default_rate": 0.35637447075427314
+    },
+    "val_metrics": {
+      "accuracy": 0.7484327356994755,
+      "precision": 0.6844093406593407,
+      "recall": 0.5456910123896228,
+      "f1_score": 0.6072285485775222,
+      "roc_auc": 0.8054931795313931,
+      "samples": 40995,
+      "default_rate": 0.3563605317721673
+    },
+    "test_metrics": {
+      "accuracy": 0.7463624056298862,
+      "precision": 0.6782645502645502,
+      "recall": 0.5484102809815531,
+      "f1_score": 0.6064643100446597,
+      "roc_auc": 0.8061589882785629,
+      "samples": 81991,
+      "default_rate": 0.3563683818955739
+    },
+    "feature_importance": [
+      {
+        "feature": "LoanApplicationStartedDate_year",
+        "importance": 204
+      },
+      {
+        "feature": "Interest",
+        "importance": 203
+      },
+      {
+        "feature": "AmountOfPreviousLoansBeforeLoan",
+        "importance": 179
+      },
+      {
+        "feature": "LoanDuration",
+        "importance": 166
+      },
+      {
+        "feature": "Age",
+        "importance": 163
+      },
+      {
+        "feature": "MonthlyPaymentDay",
+        "importance": 161
+      },
+      {
+        "feature": "IncomeTotal",
+        "importance": 146
+      },
+      {
+        "feature": "Rating",
+        "importance": 129
+      },
+      {
+        "feature": "LoanDate_year",
+        "importance": 128
+      },
+      {
+        "feature": "LiabilitiesTotal",
+        "importance": 127
+      },
+      {
+        "feature": "AppliedAmount",
+        "importance": 116
+      },
+      {
+        "feature": "ExistingLiabilities",
+        "importance": 99
+      },
+      {
+        "feature": "Education",
+        "importance": 92
+      },
+      {
+        "feature": "payment_to_income_ratio",
+        "importance": 92
+      },
+      {
+        "feature": "HomeOwnershipType",
+        "importance": 86
+      },
+      {
+        "feature": "MonthlyPayment",
+        "importance": 86
+      },
+      {
+        "feature": "NoOfPreviousLoansBeforeLoan",
+        "importance": 83
+      },
+      {
+        "feature": "LoanApplicationStartedDate_month",
+        "importance": 81
+      },
+      {
+        "feature": "LanguageCode",
+        "importance": 70
+      },
+      {
+        "feature": "Amount",
+        "importance": 70
+      },
+      {
+        "feature": "Country",
+        "importance": 64
+      },
+      {
+        "feature": "LoanDate_month",
+        "importance": 63
+      },
+      {
+        "feature": "ApplicationSignedHour",
+        "importance": 60
+      },
+      {
+        "feature": "loan_to_income_ratio",
+        "importance": 55
+      },
+      {
+        "feature": "Gender",
+        "importance": 43
+      },
+      {
+        "feature": "has_credit_score",
+        "importance": 42
+      },
+      {
+        "feature": "DebtToIncome",
+        "importance": 29
+      },
+      {
+        "feature": "FreeCash",
+        "importance": 25
+      },
+      {
+        "feature": "LoanApplicationStartedDate_weekday",
+        "importance": 24
+      },
+      {
+        "feature": "interest_category",
+        "importance": 19
+      },
+      {
+        "feature": "ApplicationSignedWeekday",
+        "importance": 18
+      },
+      {
+        "feature": "LoanDate_weekday",
+        "importance": 16
+      },
+      {
+        "feature": "amount_category",
+        "importance": 15
+      },
+      {
+        "feature": "age_category",
+        "importance": 14
+      },
+      {
+        "feature": "VerificationType",
+        "importance": 14
+      },
+      {
+        "feature": "RefinanceLiabilities",
+        "importance": 8
+      },
+      {
+        "feature": "income_sources_count",
+        "importance": 7
+      },
+      {
+        "feature": "has_previous_loans",
+        "importance": 3
+      }
+    ],
+    "training_time": 1.4576780796051025,
+    "cross_validation": {
+      "cv_mean": 0.8046984127381483,
+      "cv_std": 0.0012156434616681926,
+      "cv_scores": [
+        0.8046145717209588,
+        0.8024458084483894,
+        0.8051020674362399,
+        0.8060369053705341,
+        0.805292710714619
+      ]
+    }
+  },
+  "random_forest": {
+    "model_name": "random_forest",
+    "train_metrics": {
+      "accuracy": 0.7456344850417298,
+      "precision": 0.6973771155013148,
+      "recall": 0.505676317873801,
+      "f1_score": 0.5862534151069595,
+      "roc_auc": 0.8058398672824172,
+      "samples": 286965,
+      "default_rate": 0.35637447075427314
+    },
+    "val_metrics": {
+      "accuracy": 0.7404317599707282,
+      "precision": 0.6901475944029135,
+      "recall": 0.49291532616880007,
+      "f1_score": 0.5750908437487522,
+      "roc_auc": 0.7957961727827453,
+      "samples": 40995,
+      "default_rate": 0.3563605317721673
+    },
+    "test_metrics": {
+      "accuracy": 0.738629849617641,
+      "precision": 0.6836941653695581,
+      "recall": 0.4960813169512988,
+      "f1_score": 0.574970249900833,
+      "roc_auc": 0.7962637593131171,
+      "samples": 81991,
+      "default_rate": 0.3563683818955739
+    },
+    "feature_importance": [
+      {
+        "feature": "LoanDate_year",
+        "importance": 0.16601863951777085
+      },
+      {
+        "feature": "LoanApplicationStartedDate_year",
+        "importance": 0.15477974293259025
+      },
+      {
+        "feature": "Interest",
+        "importance": 0.12682197421398667
+      },
+      {
+        "feature": "Rating",
+        "importance": 0.1038602034311409
+      },
+      {
+        "feature": "interest_category",
+        "importance": 0.061861053363205076
+      },
+      {
+        "feature": "Country",
+        "importance": 0.04429301891445295
+      },
+      {
+        "feature": "LoanDuration",
+        "importance": 0.03663894682229692
+      },
+      {
+        "feature": "LanguageCode",
+        "importance": 0.034408032861580895
+      },
+      {
+        "feature": "payment_to_income_ratio",
+        "importance": 0.031034624506010303
+      },
+      {
+        "feature": "MonthlyPayment",
+        "importance": 0.02510338331078937
+      },
+      {
+        "feature": "loan_to_income_ratio",
+        "importance": 0.023993389093498053
+      },
+      {
+        "feature": "has_credit_score",
+        "importance": 0.019390115125979563
+      },
+      {
+        "feature": "AppliedAmount",
+        "importance": 0.01808844597780441
+      },
+      {
+        "feature": "Amount",
+        "importance": 0.015415874390621205
+      },
+      {
+        "feature": "IncomeTotal",
+        "importance": 0.015028903586899544
+      },
+      {
+        "feature": "Gender",
+        "importance": 0.01353135054362729
+      },
+      {
+        "feature": "AmountOfPreviousLoansBeforeLoan",
+        "importance": 0.011836657731123175
+      },
+      {
+        "feature": "Education",
+        "importance": 0.011309343682860072
+      },
+      {
+        "feature": "Age",
+        "importance": 0.007449691674105005
+      },
+      {
+        "feature": "LoanApplicationStartedDate_month",
+        "importance": 0.007357338333701723
+      },
+      {
+        "feature": "LiabilitiesTotal",
+        "importance": 0.007308365788889142
+      },
+      {
+        "feature": "NoOfPreviousLoansBeforeLoan",
+        "importance": 0.0070167956324765635
+      },
+      {
+        "feature": "VerificationType",
+        "importance": 0.006970746070148681
+      },
+      {
+        "feature": "MonthlyPaymentDay",
+        "importance": 0.006635080738618835
+      },
+      {
+        "feature": "LoanDate_month",
+        "importance": 0.0066259207288848175
+      },
+      {
+        "feature": "amount_category",
+        "importance": 0.005321224460402714
+      },
+      {
+        "feature": "ApplicationSignedHour",
+        "importance": 0.0043239312262028165
+      },
+      {
+        "feature": "ExistingLiabilities",
+        "importance": 0.0041666778512126496
+      },
+      {
+        "feature": "HomeOwnershipType",
+        "importance": 0.0039060859057392116
+      },
+      {
+        "feature": "DebtToIncome",
+        "importance": 0.0037270232998405993
+      },
+      {
+        "feature": "income_sources_count",
+        "importance": 0.003231096841137149
+      },
+      {
+        "feature": "FreeCash",
+        "importance": 0.002669709190379481
+      },
+      {
+        "feature": "age_category",
+        "importance": 0.002343002004425085
+      },
+      {
+        "feature": "LoanApplicationStartedDate_weekday",
+        "importance": 0.0021345682911273504
+      },
+      {
+        "feature": "LoanDate_weekday",
+        "importance": 0.0019220828986856394
+      },
+      {
+        "feature": "has_previous_loans",
+        "importance": 0.0016669636965133254
+      },
+      {
+        "feature": "ApplicationSignedWeekday",
+        "importance": 0.00132895982812647
+      },
+      {
+        "feature": "RefinanceLiabilities",
+        "importance": 0.00048103553314539214
+      }
+    ],
+    "training_time": 8.039406061172485,
+    "cross_validation": {
+      "cv_mean": 0.7946454195404249,
+      "cv_std": 0.0016786619529256524,
+      "cv_scores": [
+        0.7932531087754615,
+        0.792380213370197,
+        0.7959010908340278,
+        0.7969774258816857,
+        0.7947152588407529
+      ]
+    }
+  },
+  "logistic_regression": {
+    "model_name": "logistic_regression",
+    "train_metrics": {
+      "accuracy": 0.7179690903071804,
+      "precision": 0.6526867252583665,
+      "recall": 0.44587207994758815,
+      "f1_score": 0.5298119433680554,
+      "roc_auc": 0.7584105513045625,
+      "samples": 286965,
+      "default_rate": 0.35637447075427314
+    },
+    "val_metrics": {
+      "accuracy": 0.7213806561775826,
+      "precision": 0.6622543529172182,
+      "recall": 0.44520501060989803,
+      "f1_score": 0.5324600900532133,
+      "roc_auc": 0.7608620544012368,
+      "samples": 40995,
+      "default_rate": 0.3563605317721673
+    },
+    "test_metrics": {
+      "accuracy": 0.719042333914698,
+      "precision": 0.6536149068322982,
+      "recall": 0.45018652246825697,
+      "f1_score": 0.5331549935149157,
+      "roc_auc": 0.7598284454579546,
+      "samples": 81991,
+      "default_rate": 0.3563683818955739
+    },
+    "feature_importance": [
+      {
+        "feature": "Rating",
+        "importance": 0.2980976222634696
+      },
+      {
+        "feature": "LoanDate_year",
+        "importance": 0.28858304687528324
+      },
+      {
+        "feature": "LoanApplicationStartedDate_year",
+        "importance": 0.28841519334809457
+      },
+      {
+        "feature": "NoOfPreviousLoansBeforeLoan",
+        "importance": 0.23421010298244682
+      },
+      {
+        "feature": "LoanDuration",
+        "importance": 0.22934432617335765
+      },
+      {
+        "feature": "income_sources_count",
+        "importance": 0.1881274909928581
+      },
+      {
+        "feature": "has_credit_score",
+        "importance": 0.16928189234526833
+      },
+      {
+        "feature": "AppliedAmount",
+        "importance": 0.16068910953630144
+      },
+      {
+        "feature": "IncomeTotal",
+        "importance": 0.12931742159531268
+      },
+      {
+        "feature": "LanguageCode",
+        "importance": 0.12904520255061863
+      },
+      {
+        "feature": "Interest",
+        "importance": 0.09689660858600879
+      },
+      {
+        "feature": "MonthlyPaymentDay",
+        "importance": 0.09306159389720005
+      },
+      {
+        "feature": "ExistingLiabilities",
+        "importance": 0.09012060141170462
+      },
+      {
+        "feature": "Education",
+        "importance": 0.08305403766710881
+      },
+      {
+        "feature": "ApplicationSignedHour",
+        "importance": 0.07862354047552975
+      },
+      {
+        "feature": "amount_category",
+        "importance": 0.07389288055192111
+      },
+      {
+        "feature": "VerificationType",
+        "importance": 0.060939683673597235
+      },
+      {
+        "feature": "RefinanceLiabilities",
+        "importance": 0.057147702409125437
+      },
+      {
+        "feature": "loan_to_income_ratio",
+        "importance": 0.05555587575144772
+      },
+      {
+        "feature": "AmountOfPreviousLoansBeforeLoan",
+        "importance": 0.05341092153169615
+      },
+      {
+        "feature": "LiabilitiesTotal",
+        "importance": 0.04978885335222924
+      },
+      {
+        "feature": "payment_to_income_ratio",
+        "importance": 0.044332468463787154
+      },
+      {
+        "feature": "Age",
+        "importance": 0.04250104821031159
+      },
+      {
+        "feature": "DebtToIncome",
+        "importance": 0.042314595476194254
+      },
+      {
+        "feature": "has_previous_loans",
+        "importance": 0.04216482112739752
+      },
+      {
+        "feature": "interest_category",
+        "importance": 0.0421190487485144
+      },
+      {
+        "feature": "FreeCash",
+        "importance": 0.03714028907280359
+      },
+      {
+        "feature": "LoanDate_month",
+        "importance": 0.032618825189636165
+      },
+      {
+        "feature": "Gender",
+        "importance": 0.023166580537243027
+      },
+      {
+        "feature": "LoanDate_weekday",
+        "importance": 0.01527914255769701
+      },
+      {
+        "feature": "age_category",
+        "importance": 0.015224726947850221
+      },
+      {
+        "feature": "HomeOwnershipType",
+        "importance": 0.01273068012474699
+      },
+      {
+        "feature": "LoanApplicationStartedDate_month",
+        "importance": 0.011641246768204598
+      },
+      {
+        "feature": "ApplicationSignedWeekday",
+        "importance": 0.008728617995862614
+      },
+      {
+        "feature": "LoanApplicationStartedDate_weekday",
+        "importance": 0.002034785032865928
+      },
+      {
+        "feature": "Country",
+        "importance": 0.0017941888174263997
+      },
+      {
+        "feature": "MonthlyPayment",
+        "importance": 0.001655123205551497
+      },
+      {
+        "feature": "Amount",
+        "importance": 0.000253398804730241
+      }
+    ],
+    "training_time": 1.2482960224151611,
+    "cross_validation": {
+      "cv_mean": 0.7582405741365802,
+      "cv_std": 0.0013710347066048286,
+      "cv_scores": [
+        0.7584870045923292,
+        0.7560506543572068,
+        0.7603654433364743,
+        0.7582229792651292,
+        0.7580767891317617
+      ]
+    }
+  }
+}
