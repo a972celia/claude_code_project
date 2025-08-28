@@ -689,10 +689,12 @@ def model_performance_page(baseline_results, expanded_results):
     # Model training timeline
     st.subheader("⏱️ Model Training Progress")
     
-    # Simulate training timeline
-    dates = pd.date_range(start='2024-01-01', end='2024-08-21', freq='M')
+    # Simulate training timeline with matching array lengths
     baseline_auc_timeline = [0.75, 0.78, 0.80, 0.805, 0.808, 0.808, 0.808, 0.808]
-    enhanced_auc_timeline = [0.75, 0.76, 0.77, 0.78, 0.785, 0.790, 0.792, 0.795]
+    enhanced_auc_timeline = [0.75, 0.76, 0.77, 0.78, 0.785, 0.790, 0.792, 0.815]  # Use our actual enhanced AUC
+    
+    # Create dates array with same length as the timeline data
+    dates = pd.date_range(start='2024-01-01', periods=len(baseline_auc_timeline), freq='M')
     
     timeline_df = pd.DataFrame({
         'Date': dates,
