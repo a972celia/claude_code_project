@@ -292,7 +292,7 @@ def main():
 
 def executive_overview_page(business_df, baseline_results, expanded_results):
     """Executive overview dashboard."""
-    st.header("Executive Overview")
+    st.header("📊 Executive Overview")
     
     # Key metrics row
     col1, col2, col3, col4, col5 = st.columns(5)
@@ -419,7 +419,7 @@ def executive_overview_page(business_df, baseline_results, expanded_results):
         
         st.markdown(f"""
         <div class="metric-card" style="color: #000000;">
-            <h4 style="color: #000000;">🚀 System Enhancements</h4>
+            <h4 style="color: #000000;">System Enhancements</h4>
             <ul style="color: #000000;">
                 <li><strong>{review_increase:.0f}x</strong> more review data (300 → 37,851)</li>
                 <li><strong>{business_increase:.0f}x</strong> more businesses (10 → 500)</li>
@@ -493,7 +493,7 @@ def executive_overview_page(business_df, baseline_results, expanded_results):
 
 def risk_assessment_page(business_df):
     """Individual business risk assessment interface."""
-    st.header("Business Risk Assessment")
+    st.header("🏢 Business Risk Assessment")
     
     # Business selection
     col1, col2 = st.columns([1, 2])
@@ -608,7 +608,7 @@ def risk_assessment_page(business_df):
 
 def model_performance_page(baseline_results, expanded_results):
     """Model performance comparison dashboard."""
-    st.header("Model Performance Analytics")
+    st.header("📈 Model Performance Analytics")
     
     # Performance comparison
     st.subheader("Baseline vs Enhanced Model Comparison")
@@ -742,7 +742,7 @@ def model_performance_page(baseline_results, expanded_results):
     
     with col3:
         st.markdown("""
-        **🚀 Path to Target**
+        **Path to Target**
         - Target: 0.83-0.85 AUC
         - Need: Real review data
         - Add: Google Business data
@@ -751,7 +751,7 @@ def model_performance_page(baseline_results, expanded_results):
 
 def feature_analysis_page(baseline_results, expanded_results, business_df):
     """Professional feature analysis with selection and impact assessment."""
-    st.header("Feature Analysis & Selection")
+    st.header("🔍 Feature Analysis & Selection")
     
     st.markdown("""
     **Objective Analysis**: Evaluating the real impact of alternative data features on model performance.
@@ -1036,7 +1036,7 @@ def feature_analysis_page(baseline_results, expanded_results, business_df):
 
 def portfolio_management_page(business_df):
     """Portfolio management and analytics."""
-    st.header("Portfolio Management")
+    st.header("💼 Portfolio Management")
     
     # Portfolio summary
     st.subheader("Portfolio Summary")
@@ -1152,7 +1152,7 @@ def portfolio_management_page(business_df):
 
 def system_status_page():
     """System status and monitoring."""
-    st.header("System Status")
+    st.header("⚙️ System Status")
     
     # Pipeline overview
     st.subheader("Pipeline Overview")
