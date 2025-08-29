@@ -742,7 +742,7 @@ def model_performance_page(baseline_results, expanded_results):
     
     with col3:
         st.markdown("""
-        **Path to Target**
+        **🚀 Path to Target**
         - Target: 0.83-0.85 AUC
         - Need: Real review data
         - Add: Google Business data
