@@ -263,12 +263,12 @@ def main():
     page = st.sidebar.selectbox(
         "Choose Dashboard View",
         [
-            "Executive Overview", 
-            "Business Risk Assessment", 
-            "Model Performance Analytics",
-            "Feature Analysis",
-            "Portfolio Management", 
-            "System Status"
+            "📊 Executive Overview", 
+            "🏢 Business Risk Assessment", 
+            "📈 Model Performance Analytics",
+            "🔍 Feature Analysis",
+            "💼 Portfolio Management", 
+            "⚙️ System Status"
         ]
     )
     
@@ -277,17 +277,17 @@ def main():
     business_df = load_sample_business_data()
     
     # Route to appropriate page
-    if page == "Executive Overview":
+    if page == "📊 Executive Overview":
         executive_overview_page(business_df, baseline_results, expanded_results)
-    elif page == "Business Risk Assessment":
+    elif page == "🏢 Business Risk Assessment":
         risk_assessment_page(business_df)
-    elif page == "Model Performance Analytics":
+    elif page == "📈 Model Performance Analytics":
         model_performance_page(baseline_results, expanded_results)
-    elif page == "Feature Analysis":
+    elif page == "🔍 Feature Analysis":
         feature_analysis_page(baseline_results, expanded_results, business_df)
-    elif page == "Portfolio Management":
+    elif page == "💼 Portfolio Management":
         portfolio_management_page(business_df)
-    elif page == "System Status":
+    elif page == "⚙️ System Status":
         system_status_page()
 
 def executive_overview_page(business_df, baseline_results, expanded_results):
@@ -321,7 +321,7 @@ def executive_overview_page(business_df, baseline_results, expanded_results):
     col1, col2 = st.columns([2, 1])
     
     with col1:
-        st.subheader("📈 Risk Distribution by Industry")
+        st.subheader("Risk Distribution by Industry")
         
         industry_risk = business_df.groupby(['industry', 'risk_category']).size().reset_index(name='count')
         fig_industry = px.bar(
@@ -338,7 +338,7 @@ def executive_overview_page(business_df, baseline_results, expanded_results):
         )
         st.plotly_chart(fig_industry, use_container_width=True)
         
-        st.subheader("🔄 Enhanced Features Impact Analysis")
+        st.subheader("Enhanced Features Impact Analysis")
         
         # Real feature comparison and impact
         baseline_features = len([f for f in baseline_results.get('xgboost', {}).get('feature_importance', []) if not f['feature'].startswith('review_')])
@@ -410,7 +410,7 @@ def executive_overview_page(business_df, baseline_results, expanded_results):
         """)
     
     with col2:
-        st.subheader("🎯 Key Insights")
+        st.subheader("Key Insights")
         
         # Real system enhancement metrics
         review_increase = 37851 / 300  # 126x
@@ -464,7 +464,7 @@ def executive_overview_page(business_df, baseline_results, expanded_results):
         """, unsafe_allow_html=True)
         
         # Live metrics with real calculations
-        st.subheader("⚡ Live Performance Metrics")
+        st.subheader("Live Performance Metrics")
         
         high_risk_count = len(business_df[business_df['risk_category'] == 'High Risk'])
         medium_risk_count = len(business_df[business_df['risk_category'] == 'Medium Risk'])
@@ -499,7 +499,7 @@ def risk_assessment_page(business_df):
     col1, col2 = st.columns([1, 2])
     
     with col1:
-        st.subheader("📋 Select Business")
+        st.subheader("Select Business")
         selected_business = st.selectbox(
             "Choose Business for Assessment",
             business_df['business_name'].tolist(),
@@ -509,7 +509,7 @@ def risk_assessment_page(business_df):
         # Get business data
         business_data = business_df[business_df['business_name'] == selected_business].iloc[0]
         
-        st.subheader("🏢 Business Details")
+        st.subheader("Business Details")
         st.write(f"**Industry:** {business_data['industry']}")
         st.write(f"**Location:** {business_data['location']}")
         st.write(f"**Years in Business:** {business_data['years_in_business']}")
@@ -539,7 +539,7 @@ def risk_assessment_page(business_df):
         """, unsafe_allow_html=True)
     
     with col2:
-        st.subheader("📊 Risk Factor Analysis")
+        st.subheader("Risk Factor Analysis")
         
         # Risk factor breakdown
         risk_factors = {
@@ -582,7 +582,7 @@ def risk_assessment_page(business_df):
         st.plotly_chart(fig_radar, use_container_width=True)
         
         # Feature importance for this business
-        st.subheader("🎯 Key Decision Factors")
+        st.subheader("Key Decision Factors")
         
         # Traditional vs Enhanced features impact
         traditional_score = (
@@ -611,7 +611,7 @@ def model_performance_page(baseline_results, expanded_results):
     st.header("Model Performance Analytics")
     
     # Performance comparison
-    st.subheader("🔄 Baseline vs Enhanced Model Comparison")
+    st.subheader("Baseline vs Enhanced Model Comparison")
     
     # Extract metrics
     baseline_metrics = baseline_results.get('xgboost', {}).get('test_metrics', {})
@@ -643,7 +643,7 @@ def model_performance_page(baseline_results, expanded_results):
     col1, col2 = st.columns(2)
     
     with col1:
-        st.subheader("🎯 Baseline Feature Importance")
+        st.subheader("Baseline Feature Importance")
         
         baseline_features = baseline_results.get('xgboost', {}).get('feature_importance', [])[:10]
         if baseline_features:
@@ -718,7 +718,7 @@ def model_performance_page(baseline_results, expanded_results):
     st.plotly_chart(fig_timeline, use_container_width=True)
     
     # Model insights
-    st.subheader("💡 Performance Insights")
+    st.subheader("Performance Insights")
     
     col1, col2, col3 = st.columns(3)
     
@@ -934,7 +934,7 @@ def feature_analysis_page(baseline_results, expanded_results, business_df):
             st.markdown("</ul></div>", unsafe_allow_html=True)
     
     # Feature distribution analysis
-    st.subheader("📈 Feature Distribution Analysis")
+    st.subheader("Feature Distribution Analysis")
     
     col1, col2 = st.columns(2)
     
@@ -992,7 +992,7 @@ def feature_analysis_page(baseline_results, expanded_results, business_df):
         st.plotly_chart(fig_trust, use_container_width=True)
     
     # Feature correlation heatmap
-    st.subheader("🔗 Feature Correlation Analysis")
+    st.subheader("Feature Correlation Analysis")
     
     review_features = [col for col in business_df.columns if col.startswith('review_') and business_df[col].dtype in ['float64', 'int64']]
     correlation_matrix = business_df[review_features].corr()
@@ -1007,7 +1007,7 @@ def feature_analysis_page(baseline_results, expanded_results, business_df):
     st.plotly_chart(fig_heatmap, use_container_width=True)
     
     # Feature impact on risk assessment
-    st.subheader("🎯 Feature Impact on Risk Assessment")
+    st.subheader("Feature Impact on Risk Assessment")
     
     # Show how review features correlate with risk
     risk_correlation = {}
@@ -1039,7 +1039,7 @@ def portfolio_management_page(business_df):
     st.header("Portfolio Management")
     
     # Portfolio summary
-    st.subheader("💼 Portfolio Summary")
+    st.subheader("Portfolio Summary")
     
     col1, col2, col3, col4 = st.columns(4)
     
@@ -1088,7 +1088,7 @@ def portfolio_management_page(business_df):
         st.plotly_chart(fig_industry_portfolio, use_container_width=True)
     
     # Risk-Return Analysis
-    st.subheader("📊 Risk-Return Analysis")
+    st.subheader("Risk-Return Analysis")
     
     # Create risk-return scatter plot
     industry_stats = business_df.groupby('industry').agg({
@@ -1115,7 +1115,7 @@ def portfolio_management_page(business_df):
     st.plotly_chart(fig_risk_return, use_container_width=True)
     
     # Portfolio optimization recommendations
-    st.subheader("💡 Portfolio Optimization Recommendations")
+    st.subheader("Portfolio Optimization Recommendations")
     
     col1, col2, col3 = st.columns(3)
     
@@ -1155,7 +1155,7 @@ def system_status_page():
     st.header("System Status")
     
     # Pipeline overview
-    st.subheader("📊 Pipeline Overview")
+    st.subheader("Pipeline Overview")
     
     pipeline_stats = {
         'component': ['Data Ingestion', 'Feature Engineering', 'Model Training', 'Prediction API', 'Dashboard'],
@@ -1169,7 +1169,7 @@ def system_status_page():
     st.dataframe(pipeline_df, use_container_width=True)
     
     # Data sources status
-    st.subheader("📡 Data Sources Status")
+    st.subheader("Data Sources Status")
     
     col1, col2 = st.columns(2)
     
@@ -1204,7 +1204,7 @@ def system_status_page():
         st.plotly_chart(fig_throughput, use_container_width=True)
     
     # System health monitoring
-    st.subheader("⚡ System Health Monitoring")
+    st.subheader("System Health Monitoring")
     
     col1, col2, col3, col4 = st.columns(4)
     
@@ -1218,7 +1218,7 @@ def system_status_page():
         st.metric("🌐 API Response Time", "120ms", "-10ms")
     
     # Recent activity log
-    st.subheader("📝 Recent Activity Log")
+    st.subheader("Recent Activity Log")
     
     activity_log = [
         {'timestamp': '2024-08-21 15:30:25', 'event': 'Model training completed', 'status': '✅ Success'},
@@ -1234,7 +1234,7 @@ def system_status_page():
     st.dataframe(activity_df, use_container_width=True)
     
     # Infrastructure costs
-    st.subheader("💰 Infrastructure Costs")
+    st.subheader("Infrastructure Costs")
     
     cost_comparison = {
         'Component': ['API Costs (Traditional)', 'Free Dataset Processing', 'Compute Resources', 'Storage', 'Total Monthly'],
