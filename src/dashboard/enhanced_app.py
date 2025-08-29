@@ -777,7 +777,7 @@ def feature_analysis_page(baseline_results, expanded_results, business_df):
     
     with col1:
         st.markdown(f"""
-        **High Impact Features**  
+        **🔴 High Impact Features**  
         *Importance > 2%*
         
         {len(high_impact_features)} features drive core performance:
@@ -787,7 +787,7 @@ def feature_analysis_page(baseline_results, expanded_results, business_df):
     
     with col2:
         st.markdown(f"""
-        **Medium Impact Features**  
+        **🟡 Medium Impact Features**  
         *Importance 1-2%*
         
         {len(medium_impact_features)} features provide moderate lift:
@@ -797,7 +797,7 @@ def feature_analysis_page(baseline_results, expanded_results, business_df):
     
     with col3:
         st.markdown(f"""
-        **Low Impact Features**  
+        **🟤 Low Impact Features**  
         *Importance < 1%*
         
         {len(low_impact_features)} features add minimal value:
